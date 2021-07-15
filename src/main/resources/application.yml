@@ -1,0 +1,19 @@
+server:
+    port: 8080
+tcp:
+    server:
+        port: 8092
+        info_code: '00000'
+        import_code: '00000'
+speeid:
+    shortUrl:
+        ip: localhost
+        port: 8080
+    bill:
+        code: '0000'
+        appr_state: 'P'
+vp:
+    inqPoint:
+        code: '0000'
+    immUsePoint:
+        code: '0000'

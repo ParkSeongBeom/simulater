@@ -1,0 +1,12 @@
+###
+POST http://localhost:11200/vp/inqPoint
+Content-Type: application/json
+
+{
+  "mch_id":"TEST01",
+  "mch_idx":"TEST0101",
+  "mch_nm":"브이피",
+  "sbj_clss":"1",
+  "ci":"skldal3kj329u09dsaopjkfAW3098U5LK+23KFLASJF03W9==",
+  "etc_val":""
+}

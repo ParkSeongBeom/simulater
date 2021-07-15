@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./speed.js"></script>
+</head>
+<body>
+<button id="speeidBt">SPEEID 시작 </button>
+<script>
+    let bt1 = document.querySelector("#speeidBt");
+    bt1.addEventListener("click",function(){
+        speeidPayment.winOpen({
+            "apikey": "SPEEID-TEST-API-KEY",
+            "member": "PAYMINT_U_001",
+            "merchant": "PAYMINT_U_001",
+            "customer": "paymint-speeid",
+            "bill": {
+                "bill_id": "202120000012920",
+                "product_nm": "상품명",
+                "price": "20003",
+                "hash": "4132a594d73c11363b1bab700c492d9764df82405c38fc8080f9c0697918b118",
+                "bill_type": "P",
+                "bill_desc": "매월 말일 결제됩니다",
+                "request_pay_type": "1,2,5",
+                "callbackURL": "http://133.186.210.103:10080/api/point-charge/speeid-callback"
+            }
+            ,"appr_state": "P"
+            ,callSuccess:function(rep){
+                console.log('성공', rep.code, rep.msg);
+            },callFail:function(rep){
+                console.log('실패', rep.code, rep.msg);
+            }
+        })
+    })
+</script>
+</body>
+</html>
